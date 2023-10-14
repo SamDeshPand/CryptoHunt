@@ -5,7 +5,7 @@ import 'package:async/async.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:http/http.dart' as http;
 
-final list=<String>["bitcoin","ethereum","litecoin"];
+final list=<String>["bitcoin","ethereum","litecoin","alphacoin"];
 
 class Coins{
 

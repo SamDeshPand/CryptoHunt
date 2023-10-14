@@ -15,8 +15,16 @@ class Cryptos extends StatelessWidget {
             builder:(BuildContext context,AsyncSnapshot snapshot) {return ListView.builder(itemCount:snapshot.data.length,
             itemBuilder:  (BuildContext context, int index) {
                 return Container(
+                  decoration:BoxDecoration(border:Border.all(color:Colors.black)),
             height: 50,
-            child: Center(child: Text('${list[index]}')),
+            child: Center(child: Row(
+              mainAxisAlignment:MainAxisAlignment.spaceAround,
+              children: [
+                Image.network('${snapshot.data[index].image}'),
+                Text('${snapshot.data[index].name}'),
+                Text('${snapshot.data[index].price}'),
+              ],
+            )),
                 );
               },);},
           ),
